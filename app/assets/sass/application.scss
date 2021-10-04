@@ -1,0 +1,137 @@
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+$govuk-new-link-styles: true;
+
+// We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
+$govuk-assets-path: '/govuk/assets/';
+
+// Import GOV.UK Frontend and any extension styles if extensions have been configured
+@import "lib/extensions/extensions";
+
+// Patterns that aren't in Frontend
+@import "patterns/step-by-step-header";
+@import "patterns/step-by-step-nav";
+@import "patterns/step-by-step-related";
+@import "patterns/task-list";
+@import "patterns/related-items";
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+.section-break-bar {
+    border: 10px solid #f3f2f1 ;
+}
+
+.tag {
+    margin: 0 10px;
+}
+
+.tag-highlight {
+
+    &__not-started {
+        color: #00703c;
+        background-color: #e7ffed;
+    }
+
+    &__in-progress {
+        color: #00396b;
+        background-color: #e7edff;
+    }
+
+    &__completed {
+        color: #505a5f;
+    }
+
+    &__incomplete {
+        color: #9f0000;
+        background-color: #ffe7e8 ;
+    }
+
+    &__cannot-start-yet {
+        color: #b1b4b6;
+    }
+
+    &__mono {
+        background-color: #e1e4e6;
+    }
+}
+
+.tag-brackets-brackets::before{
+    content: "[";
+    padding-right: 2px;
+}
+
+.tag-brackets-brackets::after{
+    content: "]";
+    padding-left: 2px;
+}
+
+.tag-brackets {
+
+    &__not-started {
+        color: #008045;
+    }
+
+    &__in-progress {
+        color: #005AA9;
+    }
+
+    &__completed {
+        color: #b1b4b6;
+    }
+
+    &__incomplete {
+        color: #E10001;
+    }
+
+    &__cannot-start-yet {
+        color: #b1b4b6;
+    }
+}
+
+.tag-flag {
+    border-left: 4px solid;
+    padding: 0 4px;
+}
+
+.tag-minimalFlag {
+    border-left: 1px solid;
+    padding: 0 4px;
+}
+
+.tag-flagged {
+
+    &__not-started {
+        color: #00703c;
+        background-color: #e7ffed;
+    }
+
+    &__in-progress {
+        color: #00396b;
+        background-color: #e7edff;
+    }
+
+    &__completed {
+        color: #505a5f;
+    }
+
+    &__incomplete {
+        color: #9f0000;
+        background-color: #ffe7e8 ;
+    }
+
+    &__cannot-start-yet {
+        color: #b1b4b6;
+    }
+}
+
+.govuk-summary-list__value {
+    width: 60%;
+}
+
+.govuk-summary-list__actions {
+    width: 40%;
+}
+
+.list-starter {
+    border-top: 1px solid #b1b4b6;
+}
