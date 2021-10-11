@@ -1,0 +1,51 @@
+
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+      "text": "Back",
+      "href": "index.html"
+    }) 
+  }}
+{% endblock %}
+
+{% block pageTitle %}
+  Snippets | Rich text editors
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        
+        <span class="govuk-caption-l">Snippets</span>
+        <h1 class="govuk-heading-xl">Rich text editors</h1>
+
+        <p class="govuk-body-l">
+            We have recognised a need in DfE SDD projects for a rich text editor in place of standard text areas.
+        </p>
+
+        <p class="govuk-body">
+            AMSD Caseworkers in particular require a rich text option for creating narratives to put forward for review by senior colleagues and ministers. 
+        </p>
+
+        <p class="govuk-body">
+            The Ministry of Justice have a <a href="https://design-patterns.service.justice.gov.uk/components/rich-text-editor/">rich text editor component</a> which we originally intended to use. We have since learned that this is being phased out of use due to some accessibility issues, and that they are looking at third-party rich text editors. 
+        </p>
+
+        <p class="govuk-body">
+            We have a pressing need, and so I have created test pages for a number of the most popular rich text editors here. 
+        </p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li><a href="rich-text/quill" class="govuk-link">Quill</a></li>
+            <li><a href="rich-text/trumbowyg" class="govuk-link">Trumbowyg</a></li>
+            <li><a href="rich-text/tinymce" class="govuk-link">TinyMCE</a></li>
+            <li><a href="rich-text/ckeditor" class="govuk-link">CKEditor</a></li>
+        </ul>
+              
+    </div>
+  </div>
+
+{% endblock %}
+

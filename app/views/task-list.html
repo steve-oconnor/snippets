@@ -1,0 +1,36 @@
+
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+      "text": "Back",
+      "href": "index.html"
+    }) 
+  }}
+{% endblock %}
+
+{% block pageTitle %}
+  Snippets | Task list
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        
+        <span class="govuk-caption-l">Snippets</span>
+        <h1 class="govuk-heading-xl">Task list</h1>
+
+        <h2 class="govuk-heading-s">Tags</h2>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li><a href="task-list/highlights" class="govuk-link">Highlights</a></li>
+            <li><a href="task-list/brackets" class="govuk-link">Brackets</a></li>
+            <li><a href="task-list/flagged" class="govuk-link">Flagged</a></li>
+        </ul>
+              
+    </div>
+  </div>
+
+{% endblock %}
+

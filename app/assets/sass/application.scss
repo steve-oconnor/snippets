@@ -17,7 +17,8 @@ $govuk-assets-path: '/govuk/assets/';
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
-@import "govuk-quill";
+@import "card";
+@import "quill-govtheme";
 
 .section-break-bar {
     border: 10px solid #f3f2f1 ;
