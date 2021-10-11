@@ -17,6 +17,8 @@ $govuk-assets-path: '/govuk/assets/';
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
+@import "govuk-quill";
+
 .section-break-bar {
     border: 10px solid #f3f2f1 ;
 }
@@ -125,9 +127,9 @@ $govuk-assets-path: '/govuk/assets/';
 }
 
 .govuk-summary-list__value {
-    width: 60%;
+    width: 50%;
 }
 
 .govuk-summary-list__actions {
-    width: 40%;
+    width: 50%;
 }

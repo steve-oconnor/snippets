@@ -1,0 +1,58 @@
+
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+      "text": "Back",
+      "href": "javascript: window.history.go(-1)"
+    }) 
+  }}
+{% endblock %}
+
+{% block pageTitle %}
+  Snippets | Rich text editors | Quill
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        
+        <span class="govuk-caption-l">Rich text editors</span>
+        <h1 class="govuk-heading-xl">Quill</h1>
+              
+        <div id="editor">
+            <p>You can’t think yourself out of a writing block; you have to write yourself out of a thinking block.</p>
+        </div>
+
+        <!--<div id="counter">0 words</div>-->
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <a href="https://quilljs.com/" class="govuk-link govuk-body-m">Visit Quill website</a>
+
+    </div>
+  </div>
+
+<link href="govuk-quill.css" rel="stylesheet">
+
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+<script>
+  var  toolbarOptions = [
+    ['bold', 'italic', 'underline', 'strike'],
+    [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+    [{ 'indent': '-1'}, { 'indent': '+1' }],
+    ['blockquote'],
+  ];
+    
+  var quill = new Quill('#editor', {
+    theme: 'snow',
+    modules: {
+    toolbar: toolbarOptions
+    }
+  });
+</script>
+
+
+{% endblock %}

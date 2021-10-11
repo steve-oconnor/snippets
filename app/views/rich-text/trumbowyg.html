@@ -1,0 +1,52 @@
+
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+      "text": "Back",
+      "href": "javascript: window.history.go(-1)"
+    }) 
+  }}
+{% endblock %}
+
+{% block pageTitle %}
+  Snippets | Rich text editors | Trumbowyg
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        
+        <span class="govuk-caption-l">Rich text editors</span>
+        <h1 class="govuk-heading-xl">Trumbowyg</h1>
+              
+        <div id="trumbowyg-demo">
+            <p>You can’t think yourself out of a writing block; you have to write yourself out of a thinking block.</p>
+        </div>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <a href="https://alex-d.github.io/Trumbowyg" class="govuk-link govuk-body-m">Visit Trumbowyg website</a>
+
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block pageScripts %}
+
+<link rel="stylesheet" href="trumbowyg/dist/ui/trumbowyg.min.css">
+<!-- Import jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
+<!-- Import Trumbowyg -->
+<script src="trumbowyg/dist/trumbowyg.min.js"></script>
+
+<script>
+    // Doing this in a loaded JS file is better, I put this here for simplicity
+    $('#trumbowyg-demo').trumbowyg();
+</script>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+      "text": "Back",
+      "href": "javascript: window.history.go(-1)"
+    }) 
+  }}
+{% endblock %}
+
+{% block pageTitle %}
+  Snippets | Rich text editors | TinyMCE
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        
+        <span class="govuk-caption-l">Rich text editors</span>
+        <h1 class="govuk-heading-xl">TinyMCE</h1>
+              
+        <form method="post">
+            <textarea id="mytextarea" name="mytextarea">
+                You can’t think yourself out of a writing block; you have to write yourself out of a thinking block.
+            </textarea>
+        </form>
+
+        <!--<div id="counter">0 words</div>-->
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <a href="https://www.tiny.cloud/" class="govuk-link govuk-body-m">Visit TinyMCE website</a>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.tiny.cloud/1/7vkgjsb8hlsqvyr3cncax90z17xfzujus4wpkl6ms6y0t2lh/tinymce/5/tinymce.min.js" referrerpolicy="origin">
+  </script>
+  
+  <script>
+    tinymce.init({
+      selector: '#mytextarea'
+    });
+  </script>
+
+
+{% endblock %}
