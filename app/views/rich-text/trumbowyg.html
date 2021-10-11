@@ -22,10 +22,10 @@
         <h1 class="govuk-heading-xl">Trumbowyg</h1>
               
         <div id="trumbowyg-demo">
-            <p>You can’t think yourself out of a writing block; you have to write yourself out of a thinking block.</p>
+          You can’t think yourself out of a writing block; you have to write yourself out of a thinking block.
         </div>
 
-        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
         <a href="https://alex-d.github.io/Trumbowyg" class="govuk-link govuk-body-m">Visit Trumbowyg website</a>
 
@@ -36,17 +36,16 @@
 
 {% block pageScripts %}
 
-<link rel="stylesheet" href="trumbowyg/dist/ui/trumbowyg.min.css">
 <!-- Import jQuery -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
 
 <!-- Import Trumbowyg -->
+<link rel="stylesheet" href="trumbowyg/dist/ui/trumbowyg.min.css">
 <script src="trumbowyg/dist/trumbowyg.min.js"></script>
 
 <script>
-    // Doing this in a loaded JS file is better, I put this here for simplicity
-    $('#trumbowyg-demo').trumbowyg();
+  $('#trumbowyg-demo').trumbowyg();
 </script>
 
 {% endblock %}

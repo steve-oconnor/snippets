@@ -21,18 +21,22 @@
         <span class="govuk-caption-l">Rich text editors</span>
         <h1 class="govuk-heading-xl">Quill</h1>
               
-        <div id="editor">
-            <p>You can’t think yourself out of a writing block; you have to write yourself out of a thinking block.</p>
+        <div id="quill-demo">
+          You can’t think yourself out of a writing block; you have to write yourself out of a thinking block.
         </div>
 
         <!--<div id="counter">0 words</div>-->
 
-        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
         <a href="https://quilljs.com/" class="govuk-link govuk-body-m">Visit Quill website</a>
 
     </div>
   </div>
+
+{% endblock %}
+
+{% block pageScripts %}
 
 <link href="govuk-quill.css" rel="stylesheet">
 
@@ -46,13 +50,12 @@
     ['blockquote'],
   ];
     
-  var quill = new Quill('#editor', {
+  var quill = new Quill('#quill-demo', {
     theme: 'snow',
     modules: {
     toolbar: toolbarOptions
     }
   });
 </script>
-
 
 {% endblock %}
