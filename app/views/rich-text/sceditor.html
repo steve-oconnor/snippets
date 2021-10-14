@@ -1,0 +1,55 @@
+
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+      "text": "Back",
+      "href": "javascript: window.history.go(-1)"
+    }) 
+  }}
+{% endblock %}
+
+{% block pageTitle %}
+  Snippets | Rich text editors | SCEditor
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        
+        <span class="govuk-caption-l">Rich text editors</span>
+        <h1 class="govuk-heading-xl">SCEditor</h1>
+              
+        <textarea id="sceditor-demo">
+            You can’t think yourself out of a writing block; you have to write yourself out of a thinking block.
+        </textarea>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <a href="https://ckeditor.com/" class="govuk-link govuk-body-m">Visit CKEditor website</a>
+
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block pageScripts %}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sceditor@3/minified/themes/default.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/sceditor@3/minified/sceditor.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sceditor@3/minified/formats/xhtml.min.js"></script>
+<script>
+var textarea = document.getElementById('sceditor-demo');
+sceditor.create(textarea, {
+	format: 'xhtml',
+	style: 'https://cdn.jsdelivr.net/npm/sceditor@3/minified/themes/content/default.min.css',
+    toolbar: 'bold,italic|bulletlist,orderedlist|quote,date',
+    width: '100%',
+    height: '200px',
+    autoExpand: 'true'
+});
+</script>
+
+{% endblock %}

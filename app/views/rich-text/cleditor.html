@@ -1,0 +1,56 @@
+
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+      "text": "Back",
+      "href": "javascript: window.history.go(-1)"
+    }) 
+  }}
+{% endblock %}
+
+{% block pageTitle %}
+  Snippets | Rich text editors | CLEditor
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        
+        <span class="govuk-caption-l">Rich text editors</span>
+        <h1 class="govuk-heading-xl">CLEditor</h1>
+              
+        <textarea id="cleditor-demo" name="cleditor-demo">
+            You can’t think yourself out of a writing block; you have to write yourself out of a thinking block.
+        </textarea>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <a href="https://ckeditor.com/" class="govuk-link govuk-body-m">Visit CKEditor website</a>
+
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block pageScripts %}
+
+<link rel="stylesheet" href="/public/cleditor/jquery.cleditor.css" />
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
+<script src="/public/cleditor/jquery.cleditor.min.js"></script>
+<script>
+  $(document).ready(function () { $("#cleditor-demo").cleditor({
+    controls: // controls to add to the toolbar
+      "bold italic subscript superscript | font size " +
+      "style removeformat | bullets numbering | outdent " +
+      "indent | alignleft center alignright justify | undo redo | ",
+    bodyStyle: "font:19px 'GDS Transport', arial, sans-serif; cursor:text; margin:10px"
+    });
+  });
+</script>
+
+{% endblock %}
