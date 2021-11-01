@@ -19,6 +19,8 @@ $govuk-assets-path: '/govuk/assets/';
 
 @import "card";
 @import "quill-govtheme";
+@import "jquery.cleditor";
+@import "trumbowyg.min";
 
 .section-break-bar {
     border: 10px solid #f3f2f1 ;
