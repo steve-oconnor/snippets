@@ -29,6 +29,8 @@
 
         <a href="https://premiumsoftware.net/cleditor/" class="govuk-link govuk-body-m">Visit CLEditor website</a>
 
+        <img src="/images/pat-test.png"/>
+
     </div>
   </div>
 
@@ -37,9 +39,11 @@
 {% block pageScripts %}
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-
 <script src="/public/javascripts/jquery.cleditor.min.js"></script>
+<script>
+  window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
+</script>
+
 <script>
   $(document).ready(function () { $("#cleditor-demo").cleditor({
     controls: // controls to add to the toolbar
