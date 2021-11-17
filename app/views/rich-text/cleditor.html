@@ -29,8 +29,6 @@
 
         <a href="https://premiumsoftware.net/cleditor/" class="govuk-link govuk-body-m">Visit CLEditor website</a>
 
-        <img src="/images/pat-test.png"/>
-
     </div>
   </div>
 
@@ -45,13 +43,16 @@
 </script>
 
 <script>
-  $(document).ready(function () { $("#cleditor-demo").cleditor({
+  $(document).ready(function () {
+  $("#cleditor-demo")
+  .cleditor({
     controls: // controls to add to the toolbar
       "bold italic subscript superscript | font size " +
       "style removeformat | bullets numbering | outdent " +
       "indent | alignleft center alignright justify | undo redo | ",
     bodyStyle: "font:19px 'GDS Transport', arial, sans-serif; cursor:text; margin:10px"
     });
+  .imagesPath("/public/images/");
   });
 </script>
 
