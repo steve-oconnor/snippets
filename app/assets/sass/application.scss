@@ -27,14 +27,15 @@ $govuk-assets-path: '/govuk/assets/';
 }
 
 .tag {
-    margin: 0 10px;
+    margin: 0 5px;
+    padding: 2px 4px;
 }
 
 .tag-highlight {
 
     &__not-started {
         color: #00703c;
-        background-color: #e7ffed;
+        background-color: #dbffe5;
     }
 
     &__in-progress {
@@ -93,14 +94,24 @@ $govuk-assets-path: '/govuk/assets/';
     }
 }
 
-.tag-flag {
-    border-left: 4px solid;
-    padding: 0 4px;
-}
+.tag {
 
-.tag-minimalFlag {
-    border-left: 1px solid;
-    padding: 0 4px;
+    &__standard {
+        border-left: 4px solid;
+        padding: 0 4px;
+    }
+
+    &__minimal {
+        border-left: 2px solid #a4b0b2;
+        padding: 0 4px;
+        color: #505a5f;
+        background-color: #f5f5f5;   
+    }
+
+    &__error {
+        border-left:6px solid;
+        padding: 0 4px;
+    }
 }
 
 .tag-flagged {
@@ -115,13 +126,9 @@ $govuk-assets-path: '/govuk/assets/';
         background-color: #e7edff;
     }
 
-    &__completed {
-        color: #505a5f;
-    }
-
     &__incomplete {
         color: #9f0000;
-        background-color: #ffe7e8 ;
+        background-color: #ffe7e8;
     }
 
     &__cannot-start-yet {
