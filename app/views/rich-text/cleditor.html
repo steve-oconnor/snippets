@@ -13,8 +13,13 @@
   Snippets | Rich text editors | CLEditor
 {% endblock %}
 
-{% block content %}
+{% block head %}
+  {{ super() }}
+  <link rel="stylesheet" href="/public/cleditor/jquery.cleditor.css" />
+{% endblock %}
 
+{% block content %}
+  
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         
@@ -36,11 +41,7 @@
 
 {% block pageScripts %}
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="/public/javascripts/jquery.cleditor.min.js"></script>
-<script>
-  window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
-</script>
+<script src="/public/cleditor/jquery.cleditor.min.js"></script>
 
 <script>
   $(document).ready(function () {
