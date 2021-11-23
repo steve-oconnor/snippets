@@ -13,6 +13,11 @@
   Snippets | Rich text editors | Trumbowyg
 {% endblock %}
 
+{% block head %}
+  {{ super() }}
+  <link rel="stylesheet" href="trumbowyg/dist/ui/trumbowyg.min.css">
+{% endblock %}
+
 {% block content %}
 
   <div class="govuk-grid-row">
@@ -44,6 +49,7 @@
     btns: [['strong', 'em',], ['insertImage']],
     autogrow: true
   });
+  $.trumbowyg.svgPath = '/assets/my-custom-path/icons.svg';
 </script>
 
 {% endblock %}

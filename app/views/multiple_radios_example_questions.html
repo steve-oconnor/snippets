@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+      "text": "Back",
+      "href": "javascript: window.history.go(-1)"
+    }) 
+  }}
+{% endblock %}
+
+{% block pageTitle %}
+  Multiple radios example | Questions
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      
+        <div class="govuk-grid-column-two-thirds">
+
+            <form action="multiple_radios_example_answers" class="form" method="post">
+                
+                <span class="govuk-caption-l">Multiple radios example</span>
+                <h1 class="govuk-heading-l">Questions</h1>
+
+                <!-- Q One -->
+                <div class="govuk-form-group govuk-!-margin-top-9">
+
+                    <fieldset class="govuk-fieldset">
+
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h2 class="govuk-fieldset__heading">
+                                Which colour do you want?
+                            </h2>
+                        </legend>
+
+                        <div class="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="which-colour" name="which-colour" type="radio" value="drunk-tank-pink">
+                                <label class="govuk-label govuk-radios__label" for="which-colour">
+                                Drunk-tank pink
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="which-colour-2" name="which-colour" type="radio" value="lusty-gallant">
+                                <label class="govuk-label govuk-radios__label" for="which-colour-2">
+                                Lusty gallant
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="which-colour-3" name="which-colour" type="radio" value="bastard-amber">
+                                <label class="govuk-label govuk-radios__label" for="which-colour-3">
+                                Bastard-amber
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="where-do-you-live-4" name="which-colour" type="radio" value="goose-turd-green">
+                                <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                                Goose turd green
+                                </label>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+                <!-- End Q One -->
+
+                <!-- Q Two -->
+                <div class="govuk-form-group govuk-!-margin-top-9">
+
+                    <fieldset class="govuk-fieldset">
+
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h2 class="govuk-fieldset__heading">
+                                Which colour does Barry want?
+                            </h2>
+                        </legend>
+
+                        <div class="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="which-colour-barry" name="which-colour-barry" type="radio" value="drunk-tank-pink">
+                                <label class="govuk-label govuk-radios__label" for="which-colour-barry">
+                                Drunk-tank pink
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="which-colour-barry-2" name="which-colour-barry" type="radio" value="lusty-gallant">
+                                <label class="govuk-label govuk-radios__label" for="which-colour-barry-2">
+                                Lusty gallant
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="which-colour-barry-3" name="which-colour-barry" type="radio" value="bastard-amber">
+                                <label class="govuk-label govuk-radios__label" for="which-colour-barry-3">
+                                Bastard-amber
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="which-colour-barry-4" name="which-colour-barry" type="radio" value="goose-turd-green">
+                                <label class="govuk-label govuk-radios__label" for="which-colour-barry-4">
+                                Goose turd green
+                                </label>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+                <!-- End Q Two -->
+
+                <!--Buttons-->
+                <div class="govuk-button-group govuk-!-margin-top-6">
+                    <button data-prevent-double-click="true" class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
+                        Add colour(s)
+                    </button>
+                    <a class="govuk-link" href="prototyping-examples">Examples home</a>
+                </div>
+
+            
+            </form>
+
+        </div>
+
+    </div>
+  </div>
+
+{% endblock %}
+
+</html>

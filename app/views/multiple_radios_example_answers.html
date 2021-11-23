@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+      "text": "Back",
+      "href": "javascript: window.history.go(-1)"
+    }) 
+  }}
+{% endblock %}
+
+{% block pageTitle %}
+  Multiple radios example | Answers
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      
+        <div class="govuk-grid-column-two-thirds">
+
+            <span class="govuk-caption-l">Multiple radios example</span>
+            <h1 class="govuk-heading-l">Answers</h1>
+
+            <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                    Your colour
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                    
+                        {% if data['which-colour'] == 'drunk-tank-pink' %}
+                            Drunk tank pink
+                        {% elif data['which-colour'] == 'lusty-gallant' %}
+                            Lusty gallant
+                        {% elif data['which-colour'] == 'bastard-amber' %}
+                            Bastard amber
+                        {% elif data['which-colour'] == 'goose-turd-green' %}
+                            Goose turd green
+                        {% endif %}
+
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                    Barry's colour
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                    
+                        {% if data['which-colour-barry'] == 'drunk-tank-pink' %}
+                            Drunk tank pink
+                        {% elif data['which-colour-barry'] == 'lusty-gallant' %}
+                            Lusty gallant
+                        {% elif data['which-colour-barry'] == 'bastard-amber' %}
+                            Bastard amber
+                        {% elif data['which-colour-barry'] == 'goose-turd-green' %}
+                            Goose turd green
+                        {% endif %}
+
+                    </dd>
+                </div>
+            </dl>
+
+            <div class="govuk-button-group">
+                {{ govukButton({
+                    text: "Do it again",
+                    href: "multiple_radios_example_questions"
+                }) }}
+                
+                {{ govukButton({
+                    text: "Examples home",
+                    classes: "govuk-button--secondary",
+                    href: "index"
+                }) }}
+            </div>
+
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible section-break-bar">
+
+            <h2 class="govuk-heading-l">Things to remember</h2>
+
+            <ul class="govuk-list steve-list--circle">
+                <li>Radios must be in a <code>form</code> to pass data to another page.</li>
+                <li>The <code>id</code> and <code>for</code> of each <code>gov_radios_item</code> in a group should be matching.</br> e.g. <code>id="which-colour-1" for="which-colour-1"</code>.</li>
+                <li>The <code>id</code>/<code>for</code> should be different for each <code>gov_radios_item</code> in a group. For ease of understanding, make them sequential.</br>e.g. <code>which-colour-1, which-colour-2, which-colour-3</code></li>
+                <li>The <code>name</code> of each <code>gov_radios_item</code> in a group should be the same.</li>
+                <li>When using multiple questions on a page remember to change the <code>legend</code> heading type and size.</li>
+            </ul>
+
+
+        </div>
+
+    </div>
+  </div>
+  {% endblock %}
+
+</html>

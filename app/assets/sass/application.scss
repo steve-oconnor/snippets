@@ -21,6 +21,22 @@ $govuk-assets-path: '/govuk/assets/';
 @import "quill-govtheme";
 @import "trumbowyg.min";
 
+code {
+    font-family: monospace, monospace;
+    font-size: 1em;
+    padding: 0 5px;
+    color: #d13118;
+    background-color: #f3f2f1;
+}
+
+.steve-list--circle {
+    padding-left: 20px;
+    list-style-type: circle;
+}
+.steve-list--circle li {
+    padding-bottom: 20px;
+}
+
 .section-break-bar {
     border: 10px solid #f3f2f1 ;
 }
