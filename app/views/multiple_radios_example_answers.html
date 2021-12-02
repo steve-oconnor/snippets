@@ -81,12 +81,30 @@
 
             <h2 class="govuk-heading-l">Things to remember</h2>
 
+            <div class="app-example__code">
+
+                <pre>
+                    <code>
+                        &lcub;% if data['which-colour'] == 'drunk-tank-pink' %&rcub;
+                        Drunk tank pink
+                        &lcub;% elif data['which-colour'] == 'lusty-gallant' %&rcub;
+                        Lusty gallant
+                        &lcub;% elif data['which-colour'] == 'bastard-amber' %&rcub;
+                        Bastard amber
+                        &lcub;% elif data['which-colour'] == 'goose-turd-green' %&rcub;
+                        Goose turd green
+                        &lcub;% endif %&rcub;
+                    </code>
+                </pre>
+
+            </div>
+
             <ul class="govuk-list steve-list--circle">
                 <li>Radios must be in a <code>form</code> to pass data to another page.</li>
                 <li>The <code>id</code> and <code>for</code> of each <code>gov_radios_item</code> in a group should be matching.</br> e.g. <code>id="which-colour-1" for="which-colour-1"</code>.</li>
                 <li>The <code>id</code>/<code>for</code> should be different for each <code>gov_radios_item</code> in a group. For ease of understanding, make them sequential.</br>e.g. <code>which-colour-1, which-colour-2, which-colour-3</code></li>
                 <li>The <code>name</code> of each <code>gov_radios_item</code> in a group should be the same.</li>
-                <li>When using multiple questions on a page remember to change the <code>legend</code> heading type and size.</li>
+                <li>When using multiple questions on a page remember to reduce the <code>legend</code> heading rank and font size.</li>
             </ul>
 
 

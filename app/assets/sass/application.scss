@@ -21,12 +21,29 @@ $govuk-assets-path: '/govuk/assets/';
 @import "quill-govtheme";
 @import "trumbowyg.min";
 
-code {
+.code__inline {
     font-family: monospace, monospace;
-    font-size: 1em;
     padding: 0 5px;
     color: #d13118;
     background-color: #f3f2f1;
+}
+
+.app-example__code {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+    position: relative;
+    color: #d13118;
+    background-color: #f3f2f1;
+    border: 1px solid #d1d0d0;
+    border-radius: 0.5rem;
+    margin-bottom: 30px;
+    padding: 15px;
+}
+
+pre {
+    padding: 0px;
+    max-width: inherit;
 }
 
 .steve-list--circle {
@@ -112,19 +129,18 @@ code {
 .tag {
 
     &__standard {
-        border-left: 4px solid;
         padding: 0 4px;
     }
 
     &__minimal {
-        border-left: 2px solid #a4b0b2;
+        border-left: 3px solid #A8ADAF;
         padding: 0 4px;
         color: #505a5f;
         background-color: #f5f5f5;   
     }
 
     &__error {
-        border-left:6px solid;
+        border-left:9px solid #CF8080;
         padding: 0 4px;
     }
 }
@@ -134,11 +150,13 @@ code {
     &__not-started {
         color: #00703c;
         background-color: #e7ffed;
+        border-left: 6px solid #80B89E;
     }
 
     &__in-progress {
         color: #00396b;
         background-color: #e7edff;
+        border-left: 6px solid #809CB5;
     }
 
     &__incomplete {
